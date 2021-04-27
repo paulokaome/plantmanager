@@ -5,6 +5,7 @@ import colors from "../styles/colors";
 import { PlantSelect } from "../pages/PlantSelect";
 import { MaterialIcons } from "@expo/vector-icons";
 import { MyPlants } from "../pages/MyPlants";
+import { Platform } from "react-native";
 
 const AppTab = createBottomTabNavigator();
 
@@ -17,6 +18,7 @@ const AuthRoutes = () => {
         labelPosition: "beside-icon",
         style: {
           height: 60,
+          paddingVertical: Platform.OS === "ios" ? 20 : 0,
         },
       }}
     >
@@ -33,7 +35,7 @@ const AuthRoutes = () => {
           ),
         }}
       />
-        <AppTab.Screen
+      <AppTab.Screen
         name="Minhas Plantas"
         component={MyPlants}
         options={{
@@ -49,6 +51,5 @@ const AuthRoutes = () => {
     </AppTab.Navigator>
   );
 };
-
 
 export default AuthRoutes;
