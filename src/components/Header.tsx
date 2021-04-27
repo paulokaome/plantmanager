@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     width: "100%",
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: Platform.OS === "ios" ? getStatusBarHeight() : 40,
+    marginTop: Platform.OS === "ios" ? getStatusBarHeight() : 70,
   },
   image: {
     width: 80,
